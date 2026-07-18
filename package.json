@@ -14,7 +14,12 @@
       "types": "./dist/extended.d.ts",
       "default": "./dist/extended.js"
     },
-    "./Swifty/*": "./dist/Swifty/*"
+    "./rico": {
+      "types": "./dist/rico.d.ts",
+      "default": "./dist/rico.js"
+    },
+    "./Swifty/*": "./dist/Swifty/*",
+    "./Rico/*": "./dist/Rico/*"
   },
   "files": [
     "dist"
@@ -22,7 +27,7 @@
   "scripts": {
     "prebuild": "rm -rf dist",
     "build": "tsc",
-    "postbuild": "cp -r src/Swifty dist/",
+    "postbuild": "cp -r src/Swifty src/Rico dist/",
     "dev": "tsc --watch",
     "prepublishOnly": "pnpm build",
     "git:commit": "git add -A && git commit -m \"feat: Introduce new features\"",
